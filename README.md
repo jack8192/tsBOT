@@ -5,10 +5,13 @@ This file is an ongoing design document.  basicBot, written in JavaScript is use
 This TypeScript code is written from scratch but implements the functions of basicBot.
 
 Features:
+
 1. Define global (i.e. all users) parameters
+
 2. Implement event processing:
    a. receive callbacks for some key press events
    b. receive callbacks for user commands
+
 3. Implement user commands:
    a. roulette
    b. gif
@@ -16,9 +19,13 @@ Features:
    d. others per end-users
 
 Goals for this Project
+
 1. Design and code in TypeScript a functional equivalent of basicBot
+
 2. Structure/modularize the TS
+
 3. Develop test benches for critical code
+
 4. Allow users to write their own extensions in JavaScript
 
 Copyright 2015 by Jack Coleman and Bradyn Larsen.  
