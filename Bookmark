@@ -1,4 +1,4 @@
-javascript:(function() {$.getScript("https://rawgit.com/jc8192/tsBOT/master/bootBot.js", function(a,b,c){alert("$.getScript completed with status = " + b);})  })();
+javascript:$.getScript("http://rtawgit.com/jc8192/tsBot/master/bootBot.js", function(a,b,c){bootBot("http://localhost/tsBot");});
 
 //
 // The above code should be used as the text for a URL within a browser's bookmark.
@@ -6,17 +6,12 @@ javascript:(function() {$.getScript("https://rawgit.com/jc8192/tsBOT/master/boot
 // The deconstruction of this bookmark follows:
 // javascript:    <<<=== Tells browser that the next stuff should be executed as a JavaScript
 //
-// ( . . . )();   <<<=== This high level view is that the ellipses is the contents of an anonymous function
-//
-// function() {. . .}  <<<==== This mid-level view is the anonymous JavaScript function that contains JavaScript statements
-//
-// $.getScript("...url...", function(a,b,c){. . .});  <<<=== first and ONLY statement of anonymous function
+// $.getScript("...url...", function(a,b,c){bootBot("...local url...");});  <<<=== first and ONLY statement
 //
 // ...url...           <<<=== Actual web address of where your JavaScript code or application resides
-// function(a,b,c){. . .}  <<<=== code that is executed IF $.getScript succeeds
-// alert("$.getScript completed with a status = " + b);     <<<= Message to tell you that all is well
+// function(a,b,c){bootBot("local_url");}  <<<=== callback code that is executed IF $.getScript succeeds
+// bootBot("local_url")                    <<<=== invoke the just loaded booter
 //
-// Note. In this example, the initial version of bootBot.js also contained an alert that usually runs before the 
-//       status message.  Eventually, bootBot.js was modified to load/invoke or pass control to a javascript 
-//       that resides on the developer's PC.
+// bootBot.js is able to load/invoke or pass control to a javascript 
+// that resides on the developer's PC.
 //
